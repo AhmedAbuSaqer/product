@@ -13,7 +13,7 @@ body{
     height: 465px;
 }
 .first h1{
-    font-size: 70px;
+    font-size: calc(44px + (70 - 44) * ((100vw - 320px) / (1920 - 320)));
     color: #fff; 
     text-transform: uppercase;
     padding-top: 185px;
@@ -23,7 +23,7 @@ body{
 .first span{
     display: inline-block;
     border-bottom: 5px solid rgba(255, 255 , 255, .8);
-    font-size: 70px;
+    font-size: calc(44px + (70 - 44) * ((100vw - 320px) / (1920 - 320)));
     color: #fff; 
     text-transform: uppercase;
     margin-left: 20%;
@@ -41,18 +41,18 @@ body{
 }
 h2{
     margin-top: 140px;
-    font-size: 50px;
+    font-size: calc(34px + (50 - 34) * ((100vw - 320px) / (1920 - 320)));
     color: #04867e;
     text-transform: uppercase;
 }
 h3{
-    font-size: 40px;
+    font-size: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320)));
     color: #04867e;
 }
 p{
     
     margin-top: 55px;
-    font-size: 24px;
+    font-size: calc(19px + (24 - 19) * ((100vw - 320px) / (1920 - 320)));
     color: #04867e;
 }
 .tst{
@@ -102,4 +102,21 @@ p{
 .third p,
 .fifth p{
  color: #fff
+}
+
+
+@media (max-width: 991px){
+    
+.tst{
+    margin: 0 auto !important;
+    text-align: center !important
+}
+.first h1{
+    text-align: center;
+    padding-left: 0 !important
+}
+.first span{
+    margin-left:50%;
+    transform: translateX(-50%)
+}
 }
